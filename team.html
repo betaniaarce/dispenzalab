@@ -30,10 +30,6 @@
       border-radius: 16px;
     }
 
-    .pi-info h2 {
-      margin-top: 0;
-    }
-
     .pi-info p {
       font-size: 1rem;
       line-height: 1.6;
@@ -47,6 +43,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      margin-bottom: 40px;
     }
 
     .member-card {
@@ -92,7 +89,6 @@
 
     .slide img {
       width: 100%;
-      height: auto;
     }
 
     .caption {
@@ -134,6 +130,7 @@
 </head>
 
 <body>
+
 <header class="site-header">
   <div class="container">
     <h1 class="site-title">Dispenza Lab</h1>
@@ -151,9 +148,7 @@
 
 <main class="container">
 
-  <!-- =======================
-       PI SECTION
-  ======================= -->
+  <!-- PI -->
   <section class="about">
     <h3>Principal Investigator</h3>
 
@@ -163,67 +158,61 @@
       <div class="pi-info">
         <h2>Dr. Melanie C. Dispenza</h2>
         <p>
-          Melanie Dispenza is an Assistant Professor of Medicine in the Division of Allergy and Clinical Immunology at the Johns Hopkins University School of Medicine.  
-          She is a translational physician-scientist whose research focuses on the mechanisms, biomarkers, and prevention of immediate hypersensitivity reactions.  
-          Dr. Dispenza received the 2025 Young Physician-Scientist Award from the American Society for Clinical Investigation, and is an emerging expert in mast cell disorders.  
-          Clinically, she in an emerging expert in mast cell disorders and is active in several mastocytosis referral networks.  
-          She is also the director of the Johns Hopkins Center of Excellence for Anaphylaxis, which was founded to provide optimal and comprehensive care for patients with anaphylaxis and mast cell disorders and to support collaborative research in these areas.
+          Melanie Dispenza is an Assistant Professor of Medicine in the Division of Allergy and Clinical Immunology
+          at the Johns Hopkins University School of Medicine. She is a translational physician-scientist whose
+          research focuses on mechanisms, biomarkers, and prevention of immediate hypersensitivity reactions.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- =======================
-       LAB MEMBERS
-  ======================= -->
+  <!-- LAB MEMBERS -->
   <section class="about">
     <h3>Lab Members</h3>
+    <div class="team-grid">
+
+      <div class="member-card">
+        <img src="images/postdoc.jpg" alt="Research Technician">
+        <h4>Tina Sokol</h4>
+        <p>Research Technician. Specializing in transcriptomics and IgE signaling pathways.</p>
+      </div>
+
+      <div class="member-card">
+        <img src="images/gradstudent.jpg" alt="Research Technician">
+        <h4>Kris Chichester</h4>
+        <p>Research Technician. Researching allergic asthma and novel therapeutics.</p>
+      </div>
+
+      <div class="member-card">
+        <img src="images/pi.jpg" alt="MD Candidate">
+        <h4>Erica V. Lin</h4>
+        <p>MD Candidate. Focus: allergic inflammation, mast cell signaling.</p>
+      </div>
+
+      <div class="member-card">
+        <img src="images/BArce.jpeg" alt="Undergraduate Student">
+        <h4>Betania Arce</h4>
+        <p>Undergraduate Student. Specializing in transcriptomics and IgE signaling pathways.</p>
+      </div>
+
+    </div>
   </section>
 
-  <div class="team-grid">
-    <div class="member-card">
-      <img src="images/postdoc.jpg" alt="Research Technician">
-      <h4>Tina Sokol</h4>
-      <p>Research Technician. Specializing in transcriptomics and IgE signaling pathways.</p>
-    </div>
-
-    <div class="member-card">
-      <img src="images/gradstudent.jpg" alt="Research Technician">
-      <h4>Kris Chichester</h4>
-      <p>Research Technician. Researching allergic asthma and novel therapeutics.</p>
-    </div>
-
-    <div class="member-card">
-      <img src="images/pi.jpg" alt="MD Candidate">
-      <h4>Erica V. Lin</h4>
-      <p>MD Candidate. Focus: allergic inflammation, mast cell signaling.</p>
-    </div>
-
-    <div class="member-card">
-      <img src="images/BArce.jpeg" alt="Undergraduate Student">
-      <h4>Betania Arce</h4>
-      <p>Undergraduate Student. Specializing in transcriptomics and IgE signaling pathways.</p>
-    </div>
-
-  </div>
-
-  <!-- =======================
-       LAB LIFE
-  ======================= -->
+  <!-- LAB LIFE -->
   <section class="about">
     <h3>Lab Life</h3>
 
     <div class="slideshow-container">
       <div class="slide">
-        <img src="images/lab1.jpg" alt="Lab at work">
+        <img src="images/lab1.jpg">
         <div class="caption">The team during an experiment session.</div>
       </div>
       <div class="slide">
-        <img src="images/conference.jpg" alt="Conference photo">
-        <div class="caption">Dispenza Lab at the AAAAI/WAO Joint Congress Conference 2025.</div>
+        <img src="images/conference.jpg">
+        <div class="caption">Dispenza Lab at AAAAI/WAO Joint Congress 2025.</div>
       </div>
       <div class="slide">
-        <img src="images/lab-event.jpg" alt="Team event">
+        <img src="images/lab-event.jpg">
         <div class="caption">Celebrating a successful paper submission!</div>
       </div>
     </div>
@@ -235,26 +224,24 @@
     </div>
   </section>
 
-  <!-- =======================
-       ALUMNI
-  ======================= -->
+  <!-- ALUMNI -->
   <section class="about">
     <h3>Dispenza Lab Alumni</h3>
+
+    <div class="team-grid">
+      <div class="member-card">
+        <img src="images/NBediako.jpg" alt="Alumni">
+        <h4>Nayalene Bediako</h4>
+        <p>Undergraduate Student. Researching allergic asthma and novel therapeutics.</p>
+      </div>
+
+      <div class="member-card">
+        <img src="images/nvilela.jpg" alt="Alumni">
+        <h4>Natalia Vilela</h4>
+        <p>Now a Sophomore at USC majoring in Biomedical Engineering.</p>
+      </div>
+    </div>
   </section>
-
-  <div class="member-card">
-      <img src="images/NBediako.jpg" alt="Undergraduate Student" class="center-face">
-      <h4>Nayalene Bediako</h4>
-      <p>Undergraduate Student. Researching allergic asthma and novel therapeutics.</p>
-    </div>
-  
-  <div class="team-grid">
-    <div class="member-card">
-      <img src="images/nvilela.jpg" alt="Alumni">
-      <h4>Natalia Vilela</h4>
-      <p>Now a Sophomore at USC majoring in Biomedical Engineering.</p>
-    </div>
-
 
 </main>
 
@@ -275,12 +262,11 @@
     currentSlide = index;
   }
 
-  function nextSlide() {
+  setInterval(() => {
     currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
-  }
+  }, 5000);
 
-  setInterval(nextSlide, 5000);
   showSlide(0);
 </script>
 
