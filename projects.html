@@ -18,7 +18,7 @@
       max-width: 900px;
     }
 
-    /* Center the 3rd project on its own row */
+    /* Center the 3rd project */
     .projects-container .project-card:nth-child(3) {
       grid-column: 1 / -1;
       justify-self: center;
@@ -26,11 +26,14 @@
     }
 
     .project-card {
+      display: flex;
+      flex-direction: column;
       background: #f0f7ff;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.2s;
+      height: 100%;
     }
 
     .project-card:hover {
@@ -55,9 +58,9 @@
       line-height: 1.5;
     }
 
+    /* 🔑 Button alignment fix */
     .project-card .btn {
-      display: block;
-      margin: 10px auto 20px;
+      margin: auto auto 20px;
       padding: 8px 20px;
       background: #003366;
       color: white;
@@ -99,14 +102,11 @@
 
 <main class="container">
 
-  <!-- =======================
-       CURRENT PROJECTS
-  ======================= -->
   <section class="about">
     <h3>Research Projects</h3>
     <p>
       Our lab investigates the triggers and immunological mechanisms behind allergic
-      reactions using advanced molecular techniques. Here are a few of our current projects:
+      reactions using advanced molecular techniques.
     </p>
   </section>
 
@@ -114,36 +114,22 @@
     <div class="project-card">
       <img src="images/project1.jpg" alt="Project 1">
       <h4>Basophil and mast cell biology</h4>
-      <p>
-        We dissect the molecular and functional programs that control mast cell and basophil
-        activation in allergic disease. Our work integrates primary human cells, mouse models,
-        and clinical studies to define mechanisms driving anaphylaxis.
-      </p>
+      <p>We dissect molecular programs controlling mast cell and basophil activation.</p>
     </div>
 
     <div class="project-card">
       <img src="images/project2.jpg" alt="Project 2">
       <h4>Biomarkers of immediate hypersensitivity reactions</h4>
-      <p>
-        We aim to discover sensitive biomarkers for acute allergic reactions, including
-        anaphylaxis, to improve diagnosis and clinical management.
-      </p>
+      <p>We aim to discover sensitive biomarkers for acute allergic reactions.</p>
     </div>
 
     <div class="project-card">
       <img src="images/project3.jpg" alt="Project 3">
       <h4>Anaphylaxis prevention and treatment</h4>
-      <p>
-        Our lab investigates targeting the IgE–FcεRI signaling pathway to prevent and
-        rescue anaphylaxis. BTK inhibition has shown complete suppression of mast cell
-        and basophil activation in both preclinical and clinical studies.
-      </p>
+      <p>Targeting IgE–FcεRI signaling to prevent and rescue anaphylaxis.</p>
     </div>
   </div>
 
-  <!-- =======================
-       PREVIOUS PROJECTS
-  ======================= -->
   <section class="about">
     <h3>Previous Projects</h3>
   </section>
@@ -152,20 +138,14 @@
     <div class="project-card">
       <img src="images/project1.jpg" alt="Previous Project 1">
       <h4>Basophil and IgE-Mediated Mast Cell Activation</h4>
-      <p>
-        Assessed Bruton's Tyrosine Kinase inhibitors’ ability to block histamine and cytokine
-        release in vitro.
-      </p>
+      <p>Assessed BTK inhibitors’ ability to block histamine release in vitro.</p>
       <a href="https://pubmed.ncbi.nlm.nih.gov/40683570/" class="btn" target="_blank">Learn More</a>
     </div>
 
     <div class="project-card">
       <img src="images/project2.jpg" alt="Previous Project 2">
       <h4>Humanized Mouse Model</h4>
-      <p>
-        NSG-SGM3 mice engrafted with human leukocytes to study human immunoglobulin responses.
-        
-      </p>
+      <p>NSG-SGM3 mice engrafted with human leukocytes.</p>
       <a href="https://pubmed.ncbi.nlm.nih.gov/40927710/" class="btn" target="_blank">Learn More</a>
     </div>
   </div>
