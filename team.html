@@ -5,8 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Team | Dispenza Lab</title>
   <link rel="stylesheet" href="css/style.css"/>
+
   <style>
-    /* Team cards with images */
+    /* =======================
+       PI SECTION
+    ======================= */
+    .pi-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+      margin: 40px auto;
+      max-width: 1000px;
+      background: #f4f9ff;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .pi-section img {
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .pi-info h2 {
+      margin-top: 0;
+    }
+
+    .pi-info p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* =======================
+       TEAM GRID
+    ======================= */
     .team-grid {
       display: flex;
       flex-wrap: wrap;
@@ -26,7 +61,8 @@
 
     .member-card img {
       width: 100%;
-      height: auto;
+      height: 220px;
+      object-fit: cover;
     }
 
     .member-card h4 {
@@ -38,7 +74,9 @@
       padding: 0 10px 10px;
     }
 
-    /* Slideshow (same as previous) */
+    /* =======================
+       SLIDESHOW
+    ======================= */
     .slideshow-container {
       max-width: 800px;
       margin: 40px auto;
@@ -94,8 +132,9 @@
     }
   </style>
 </head>
+
 <body>
-  <header class="site-header">
+<header class="site-header">
   <div class="container">
     <h1 class="site-title">Dispenza Lab</h1>
     <nav class="navbar">
@@ -110,123 +149,149 @@
   </div>
 </header>
 
-  <main class="container">
-    <section class="about">
-      <h3>Meet Our Team</h3>
-    </section>
+<main class="container">
 
-    <div class="team-grid">
-      <div class="member-card">
-        <img src="images/pi.jpg" alt="Principal Investigator">
-        <h4>Dr. Melanie C. Dispenza</h4>
-        <p>Principal Investigator. Focus: Allergy and Immunology, mast cells.</p>
-      </div>
-      <div class="member-card">
-        <img src="images/postdoc.jpg" alt="Postdoc">
-        <h4>Tina Sokol</h4>
-        <p>Research Technician. Specializing in transcriptomics and IgE signaling pathways.</p>
-      </div>
-      <div class="member-card">
-        <img src="images/gradstudent.jpg" alt="Graduate Student">
-        <h4>Kris Chichester</h4>
-        <p>Research Technician. Researching allergic asthma and novel therapeutics.</p>
-      </div>
-      <div class="member-card">
-        <img src="images/pi.jpg" alt="Principal Investigator">
-        <h4>Erica V. Lin</h4>
-        <p>MD Candidate. Focus: allergic inflammation, mast cell signaling.</p>
-      </div>
-      <div class="member-card">
-        <img src="images/BArce.jpeg" alt="Postdoc">
-        <h4>Betania Arce</h4>
-        <p>Undegraduate Student. Specializing in transcriptomics and IgE signaling pathways.</p>
-      </div>
-      <div class="member-card">
-        <img src="images/NBediako.jpg" alt="Graduate Student">
-        <h4>Nayalene Bediako</h4>
-        <p>Undergraduate Student. Researching allergic asthma and novel therapeutics.</p>
+  <!-- =======================
+       PI SECTION
+  ======================= -->
+  <section class="about">
+    <h3>Principal Investigator</h3>
+
+    <div class="pi-section">
+      <img src="images/pi.jpg" alt="Dr. Melanie C. Dispenza">
+
+      <div class="pi-info">
+        <h2>Dr. Melanie C. Dispenza</h2>
+        <p>
+          Dr. Dispenza is the Principal Investigator of the Dispenza Lab. Her research
+          focuses on allergy and immunology, with an emphasis on mast cell biology,
+          IgE-mediated signaling, and translational approaches to allergic disease.
+        </p>
       </div>
     </div>
-    
+  </section>
 
-    <section class="about">
-      <h3>Lab Life</h3>
-      <div class="slideshow-container">
-        <div class="slide">
-          <img src="images/lab1.jpg" alt="Lab at work">
-          <div class="caption">The team during an experiment session.</div>
-        </div>
-        <div class="slide">
-          <img src="images/conference.jpg" alt="Conference photo">
-          <div class="caption">Dispenza Lab at the AAAAI/WAO Joint Congress Conference 2025.</div>
-        </div>
-        <div class="slide">
-          <img src="images/conference.jpg" alt="Conference photo">
-          <div class="caption">Presenting at the AAAAI/WAO Joint Congress Conference 2025.</div>
-        </div>
-        <div class="slide">
-          <img src="images/conference.jpg" alt="Conference photo">
-          <div class="caption">Presenting at the AAAAI/WAO Joint Congress Conference 2025.</div>
-        </div>
-        <div class="slide">
-          <img src="images/lab-event.jpg" alt="Team event">
-          <div class="caption">Celebrating a successful paper submission!</div>
-        </div>
-      </div>
-      <div class="slideshow-nav">
-        <span class="dot" onclick="showSlide(0)"></span>
-        <span class="dot" onclick="showSlide(1)"></span>
-        <span class="dot" onclick="showSlide(2)"></span>
-        <span class="dot" onclick="showSlide(3)"></span>
-      </div>
-    </section>
+  <!-- =======================
+       LAB MEMBERS
+  ======================= -->
+  <section class="about">
+    <h3>Lab Members</h3>
+  </section>
 
-    <section class="about">
-      <h3>Dispenza Lab Alumni</h3>
-    </section>
-    <div class="team-grid">
-      <div class="member-card">
-        <img src="images/nvilela.jpg" alt="Alumni 1">
-        <h4>Natalia Vilela</h4>
-        <p>Now a Sophomore at USC majoring in Biomedial Engineering.</p>
+  <div class="team-grid">
+    <div class="member-card">
+      <img src="images/postdoc.jpg" alt="Research Technician">
+      <h4>Tina Sokol</h4>
+      <p>Research Technician. Specializing in transcriptomics and IgE signaling pathways.</p>
+    </div>
+
+    <div class="member-card">
+      <img src="images/gradstudent.jpg" alt="Research Technician">
+      <h4>Kris Chichester</h4>
+      <p>Research Technician. Researching allergic asthma and novel therapeutics.</p>
+    </div>
+
+    <div class="member-card">
+      <img src="images/pi.jpg" alt="MD Candidate">
+      <h4>Erica V. Lin</h4>
+      <p>MD Candidate. Focus: allergic inflammation, mast cell signaling.</p>
+    </div>
+
+    <div class="member-card">
+      <img src="images/BArce.jpeg" alt="Undergraduate Student">
+      <h4>Betania Arce</h4>
+      <p>Undergraduate Student. Specializing in transcriptomics and IgE signaling pathways.</p>
+    </div>
+
+    <div class="member-card">
+      <img src="images/NBediako.jpg" alt="Undergraduate Student">
+      <h4>Nayalene Bediako</h4>
+      <p>Undergraduate Student. Researching allergic asthma and novel therapeutics.</p>
+    </div>
+  </div>
+
+  <!-- =======================
+       LAB LIFE
+  ======================= -->
+  <section class="about">
+    <h3>Lab Life</h3>
+
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="images/lab1.jpg" alt="Lab at work">
+        <div class="caption">The team during an experiment session.</div>
       </div>
-      <div class="member-card">
-        <img src="images/alum2.jpg" alt="Alumni 2">
-        <h4>[Alumni 2]</h4>
-        <p>Assistant Professor at ABC University studying pediatric allergies.</p>
+      <div class="slide">
+        <img src="images/conference.jpg" alt="Conference photo">
+        <div class="caption">Dispenza Lab at the AAAAI/WAO Joint Congress Conference 2025.</div>
       </div>
-      <div class="member-card">
-        <img src="images/alum3.jpg" alt="Alumni 3">
-        <h4>[Alumni 3]</h4>
-        <p>Immunology Specialist at NIH's Division of Allergy & Infectious Diseases.</p>
+      <div class="slide">
+        <img src="images/lab-event.jpg" alt="Team event">
+        <div class="caption">Celebrating a successful paper submission!</div>
       </div>
     </div>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Dispenza Lab | All rights reserved.</p>
-  </footer>
+    <div class="slideshow-nav">
+      <span class="dot" onclick="showSlide(0)"></span>
+      <span class="dot" onclick="showSlide(1)"></span>
+      <span class="dot" onclick="showSlide(2)"></span>
+    </div>
+  </section>
 
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
+  <!-- =======================
+       ALUMNI
+  ======================= -->
+  <section class="about">
+    <h3>Dispenza Lab Alumni</h3>
+  </section>
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.style.display = (i === index) ? 'block' : 'none';
-        dots[i].classList.toggle('active-dot', i === index);
-      });
-      currentSlide = index;
-    }
+  <div class="team-grid">
+    <div class="member-card">
+      <img src="images/nvilela.jpg" alt="Alumni">
+      <h4>Natalia Vilela</h4>
+      <p>Now a Sophomore at USC majoring in Biomedical Engineering.</p>
+    </div>
 
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    }
+    <div class="member-card">
+      <img src="images/alum2.jpg" alt="Alumni">
+      <h4>[Alumni 2]</h4>
+      <p>Assistant Professor at ABC University studying pediatric allergies.</p>
+    </div>
 
-    setInterval(nextSlide, 5000);
-    showSlide(0);
-  </script>
+    <div class="member-card">
+      <img src="images/alum3.jpg" alt="Alumni">
+      <h4>[Alumni 3]</h4>
+      <p>Immunology Specialist at NIH's Division of Allergy & Infectious Diseases.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Dispenza Lab | All rights reserved.</p>
+</footer>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.display = (i === index) ? 'block' : 'none';
+      dots[i].classList.toggle('active-dot', i === index);
+    });
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  setInterval(nextSlide, 5000);
+  showSlide(0);
+</script>
+
 </body>
 </html>
