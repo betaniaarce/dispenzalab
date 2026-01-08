@@ -5,17 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects | Dispenza Lab</title>
   <link rel="stylesheet" href="css/style.css"/>
+
   <style>
+    /* =======================
+       PROJECTS GRID
+    ======================= */
     .projects-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(300px, 1fr));
       gap: 30px;
-      margin: 40px 0;
+      margin: 40px auto;
+      max-width: 900px;
+    }
+
+    /* Center the 3rd project on its own row */
+    .projects-container .project-card:nth-child(3) {
+      grid-column: 1 / -1;
+      justify-self: center;
+      max-width: 420px;
     }
 
     .project-card {
-      width: 320px;
       background: #f0f7ff;
       border-radius: 12px;
       overflow: hidden;
@@ -42,6 +52,7 @@
     .project-card p {
       margin: 0 15px 15px;
       font-size: 0.95em;
+      line-height: 1.5;
     }
 
     .project-card .btn {
@@ -50,11 +61,11 @@
       padding: 8px 20px;
       background: #003366;
       color: white;
-      border: none;
       border-radius: 6px;
       text-align: center;
       text-decoration: none;
       font-size: 0.9em;
+      width: fit-content;
     }
 
     .project-card .btn:hover {
@@ -63,71 +74,106 @@
 
     footer {
       text-align: center;
-      margin: 50px 0 20px;
+      margin: 60px 0 30px;
       font-size: 0.9em;
       color: #666;
     }
   </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Dispenza Lab</h1>
-      <nav class="navbar">
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="projects.html" class="active">Projects</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">Dispenza Lab</h1>
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- =======================
+       CURRENT PROJECTS
+  ======================= -->
+  <section class="about">
+    <h3>Research Projects</h3>
+    <p>
+      Our lab investigates the triggers and immunological mechanisms behind allergic
+      reactions using advanced molecular techniques. Here are a few of our current projects:
+    </p>
+  </section>
+
+  <div class="projects-container">
+    <div class="project-card">
+      <img src="images/project1.jpg" alt="Project 1">
+      <h4>Basophil and mast cell biology</h4>
+      <p>
+        We dissect the molecular and functional programs that control mast cell and basophil
+        activation in allergic disease. Our work integrates primary human cells, mouse models,
+        and clinical studies to define mechanisms driving anaphylaxis.
+      </p>
     </div>
-  </header>
 
-  <main class="container">
-    <section class="about">
-      <h3>Research Projects</h3>
-      <p>Our lab investigates the  triggers and immunological mechanisms behind allergic reactions using advanced molecular techniques. Here are a few of our current projects:</p>
-    </section>
-     <div class="projects-container">
-      <div class="project-card">
-        <img src="images/project1.jpg" alt="Project 1">
-        <h4>Basophil and mast cell biology</h4>
-        <p>We dissect the molecular and functional programs that control mast cell and basophil activation in allergic disease.  Our work integrates primary human cells, mouse models, and clinical studies to define how these drive anaphylaxis. By mapping pathways that regulate degranulation, cytokine release, and cell–cell communication, we aim to identify actionable mechanisms that can be leveraged for biomarker discovery and therapeutic intervention across allergic disorders.</p>
-      </div>
-    
-      <div class="project-card">
-        <img src="images/project2.jpg" alt="Project 3">
-        <h4>Biomarkers of immediate hypersensitivity reactions</h4>
-        <p>The diagnosis of anaphylaxis is based on symptoms, which is problematic due to the wide variability of symptoms and overlap of allergic symptoms with other diseases. These diagnostic difficulties contribute to the misdiagnosis and mismanagement of allergies. Unfortunately, there are no sensitive biomarkers for acute allergic reactions including anaphylaxis. We are working on discovering novel biomarkers to aid in its accurate diagnosis.</p>
-      </div>
+    <div class="project-card">
+      <img src="images/project2.jpg" alt="Project 2">
+      <h4>Biomarkers of immediate hypersensitivity reactions</h4>
+      <p>
+        We aim to discover sensitive biomarkers for acute allergic reactions, including
+        anaphylaxis, to improve diagnosis and clinical management.
+      </p>
+    </div>
 
-       <div class="project-card">
-        <img src="images/project3.jpg" alt="Project 2">
-        <h4>Anaphylaxis prevention and treatment</h4>
-        <p>Anaphylaxis is a systemic allergic reaction for which there are no known reliable preventative therapies.  Our lab investigates how to prevent and interrupt anaphylaxis by targeting the IgE–FcεRI signaling pathway in mast cells and basophils. We have shown that targeting an essential enzyme in this pathway called Bruton’s tyrosine kinase (BTK) can completely shut off activation from any allergen. BTK inhibitors fully suppress activation of primary human mast cells and basophils and can completely block anaphylaxis to an intravenous allergen in humanized mice. Building on this, our recent work shows that acalabrutinib can do more than prevent reactions — it can rescue ongoing food-induced anaphylaxis when given within minutes of allergen exposure, restoring clinical stability and preventing mortality in humanized mice. In a parallel investigator-initiated clinical trial, a short, two-day course of the FDA-approved BTK inhibitor acalabrutinib eliminated clinical reactivity to peanut in most peanut-allergic adults and markedly increased tolerance in the rest. Together, these findings point to BTK inhibition as a viable strategy for both prevention and emergency treatment of anaphylaxis. </p>
-      </div>
+    <div class="project-card">
+      <img src="images/project3.jpg" alt="Project 3">
+      <h4>Anaphylaxis prevention and treatment</h4>
+      <p>
+        Our lab investigates targeting the IgE–FcεRI signaling pathway to prevent and
+        rescue anaphylaxis. BTK inhibition has shown complete suppression of mast cell
+        and basophil activation in both preclinical and clinical studies.
+      </p>
+    </div>
+  </div>
 
-    <h3> Previous Projects</h3>
-    </section>
-    <div class="projects-container">
-      <div class="project-card">
-        <img src="images/project1.jpg" alt="Project 1">
-        <h4>Basophil and IgE-Mediated Mast Cell Activation</h4>
-        <p>Assessed Bruton's Tyrosine Kinase Inhibitors abilities to block histamine and cytokine release in vitro. Explored pathways of mast cell degranulation in allergic responses.</p>
-        <a href="https://pubmed.ncbi.nlm.nih.gov/40683570/" class="btn" target="_blank">Learn More</a>
-      </div>
-      <div class="project-card">
-        <img src="images/project2.jpg" alt="Project 2">
-        <h4>Humanzied Mouse Model</h4>
-        <p>NSG-SGM3 mice engrafted with human leukocytes produce human immunoglobulins.</p>
-        <a href="https://pubmed.ncbi.nlm.nih.gov/40927710/" class="btn" target="_blank">Learn More</a>
-      </div>
-      
+  <!-- =======================
+       PREVIOUS PROJECTS
+  ======================= -->
+  <section class="about">
+    <h3>Previous Projects</h3>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Dispenza Lab | All rights reserved.</p>
-  </footer>
+  <div class="projects-container">
+    <div class="project-card">
+      <img src="images/project1.jpg" alt="Previous Project 1">
+      <h4>Basophil and IgE-Mediated Mast Cell Activation</h4>
+      <p>
+        Assessed Bruton's Tyrosine Kinase inhibitors’ ability to block histamine and cytokine
+        release in vitro.
+      </p>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/40683570/" class="btn" target="_blank">Learn More</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/project2.jpg" alt="Previous Project 2">
+      <h4>Humanized Mouse Model</h4>
+      <p>
+        NSG-SGM3 mice engrafted with human leukocytes to study human immunoglobulin responses.
+      </p>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/40927710/" class="btn" target="_blank">Learn More</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Dispenza Lab | All rights reserved.</p>
+</footer>
+
 </body>
 </html>
