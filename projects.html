@@ -18,7 +18,6 @@
       max-width: 900px;
     }
 
-    /* Center the 3rd project */
     .projects-container .project-card:nth-child(3) {
       grid-column: 1 / -1;
       justify-self: center;
@@ -30,38 +29,32 @@
       flex-direction: column;
       background: #f0f7ff;
       border-radius: 12px;
-      overflow: hidden; /* REQUIRED for zoom */
+      overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-      height: 100%;
-    }
-
-    .project-card:hover {
-      transform: translateY(-4px);
     }
 
     /* =======================
-       IMAGE ZOOM + CENTER
+       🔥 FORCE IMAGE ZOOM + CENTER
+       (OVERRIDES EVERYTHING)
     ======================= */
-    .project-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      object-position: center center; /* 🔑 center crop */
-      transform: scale(1.25);         /* 🔥 visible zoom */
-      transition: transform 0.35s ease;
-      display: block;
+    main .projects-container .project-card img {
+      width: 100% !important;
+      height: 200px !important;
+      object-fit: cover !important;
+      object-position: center center !important;
+      transform: scale(1.35) !important;   /* VERY noticeable zoom */
+      transition: transform 0.3s ease !important;
+      display: block !important;
     }
 
-    .project-card:hover img {
-      transform: scale(1.35);         /* extra hover zoom */
+    main .projects-container .project-card:hover img {
+      transform: scale(1.5) !important;
     }
 
-    /* Mobile tuning */
     @media (max-width: 768px) {
-      .project-card img {
-        height: 180px;
-        transform: scale(1.15);
+      main .projects-container .project-card img {
+        height: 180px !important;
+        transform: scale(1.2) !important;
       }
     }
 
@@ -77,21 +70,14 @@
       line-height: 1.5;
     }
 
-    /* Button alignment */
     .project-card .btn {
       margin: auto auto 20px;
       padding: 8px 20px;
       background: #003366;
       color: white;
       border-radius: 6px;
-      text-align: center;
       text-decoration: none;
-      font-size: 0.9em;
       width: fit-content;
-    }
-
-    .project-card .btn:hover {
-      background: #0055a5;
     }
 
     footer {
@@ -104,6 +90,7 @@
 </head>
 
 <body>
+
 <header class="site-header">
   <div class="container">
     <h1 class="site-title">Dispenza Lab</h1>
@@ -123,72 +110,32 @@
 
   <section class="about">
     <h3>Research Projects</h3>
-    <p>
-      Our lab investigates the triggers and immunological mechanisms behind allergic
-      reactions using advanced molecular techniques.
-    </p>
   </section>
 
   <div class="projects-container">
     <div class="project-card">
-      <img src="images/mastcellbasophil.png" alt="Basophil and mast cell biology">
+      <img src="images/mastcellbasophil.png">
       <h4>Basophil and mast cell biology</h4>
-      <p>
-        We dissect molecular programs controlling mast cell and basophil activation.
-        Our work integrates primary human cells, mouse models, and clinical studies
-        to define how these drive anaphylaxis.
-      </p>
+      <p>We dissect molecular programs controlling mast cell and basophil activation.</p>
     </div>
 
     <div class="project-card">
-      <img src="images/anaphylaxistriggers.png" alt="Biomarkers of hypersensitivity">
+      <img src="images/anaphylaxistriggers.png">
       <h4>Biomarkers of immediate hypersensitivity reactions</h4>
-      <p>
-        These diagnostic difficulties contribute to the misdiagnosis and mismanagement
-        of allergies. Unfortunately, there are no sensitive biomarkers for acute allergic
-        reactions including anaphylaxis.
-      </p>
+      <p>We aim to discover sensitive biomarkers for acute allergic reactions.</p>
     </div>
 
     <div class="project-card">
-      <img src="images/mastcellpathway.png" alt="Anaphylaxis prevention">
+      <img src="images/mastcellpathway.png">
       <h4>Anaphylaxis prevention and treatment</h4>
-      <p>
-        We investigate how to prevent and interrupt anaphylaxis by targeting the
-        IgE–FcεRI signaling pathway in mast cells and basophils. Targeting Bruton’s
-        tyrosine kinase (BTK) can completely shut off activation.
-      </p>
-    </div>
-  </div>
-
-  <section class="about">
-    <h3>Previous Projects</h3>
-  </section>
-
-  <div class="projects-container">
-    <div class="project-card">
-      <img src="images/acalstudy.png" alt="BTK inhibitor study">
-      <h4>Basophil and IgE-Mediated Mast Cell Activation</h4>
-      <p>Assessed BTK inhibitors’ ability to block histamine release in vitro.</p>
-      <a href="https://pubmed.ncbi.nlm.nih.gov/40683570/" class="btn" target="_blank">
-        Learn More
-      </a>
-    </div>
-
-    <div class="project-card">
-      <img src="images/mousemodel.png" alt="Humanized mouse model">
-      <h4>Humanized Mouse Model</h4>
-      <p>NSG-SGM3 mice engrafted with human leukocytes.</p>
-      <a href="https://pubmed.ncbi.nlm.nih.gov/40927710/" class="btn" target="_blank">
-        Learn More
-      </a>
+      <p>Targeting the IgE–FcεRI signaling pathway shuts off activation.</p>
     </div>
   </div>
 
 </main>
 
 <footer>
-  <p>&copy; 2025 Dispenza Lab | All rights reserved.</p>
+  <p>&copy; 2025 Dispenza Lab</p>
 </footer>
 
 </body>
